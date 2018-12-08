@@ -41,7 +41,7 @@ yarn install
 
 ```sh
 ├── app
-│   ├── imgs 
+│   ├── imgs # Optimized images
 │   ├── public 
 │   │   ├── js
 │   │   │   ├── main.js
@@ -51,7 +51,7 @@ yarn install
 │   │   │   └── main.min.css
 │   │   └── index.html
 │   └── src
-│       ├── index.pug # Write pug to HTML
+│       ├── imgs # Raw images directory
 │       ├── js # Write ES6
 │       │   ├── index.es6.js
 │       │   └── other.es6.js
