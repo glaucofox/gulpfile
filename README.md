@@ -41,8 +41,8 @@ yarn install
 
 ```sh
 ├── app
-│   ├── imgs # Optimized images
 │   ├── public 
+|   │   ├── imgs # Optimized images
 │   │   ├── js
 │   │   │   ├── main.js
 │   │   │   └── main.min.js
