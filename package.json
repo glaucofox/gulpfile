@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+        "@babel/core": "^7.2.0",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "es6-promise": "*",
+        "gulp": "*",
+        "gulp-autoprefixer": "*",
+        "gulp-babel": "*",
+        "gulp-cache": "*",
+        "gulp-clean-css": "*",
+        "gulp-concat": "*",
+        "gulp-csscomb": "*",
+        "gulp-imagemin": "*",
+        "gulp-jade": "*",
+        "gulp-merge-media-queries": "*",
+        "gulp-minify-html": "*",
+        "gulp-plumber": "*",
+        "gulp-rename": "*",
+        "gulp-sass": "*",
+        "gulp-uglify": "*"
+  }
+}
