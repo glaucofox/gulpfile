@@ -3,7 +3,8 @@
 [![Build Status](https://travis-ci.org/primer/primer.svg?branch=master)](https://travis-ci.org/primer/primer)
 
 ## Description
-Gulpfile with ES6, Sass, Babel and Jade
+Gulp default actions are:
+- Compile ECMAScript, Scss and Jade
 - Minify Images, HTML, CSS and JS
 - Concatenate and add auto-prefixer to CSS and JS
 
