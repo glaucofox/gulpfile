@@ -1,0 +1,79 @@
+/* SCSS goes here */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,200');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/* Colors */
+$primary-color: #FFF;
+$secondary-color: #FFCE00;
+$highlight-color: black;
+$bg-color: #0375B4;
+$link-color: SpringGreen;
+
+/* Fonts */
+$font-title: "Roboto Slab", sans-serif;
+$font-body: "Raleway", sans-serif;
+$title-size: 4em !important;
+$text-size: 20px;
+$aligned: center;
+
+/* Image */
+$image-size: 60px;
+$image-margin: 10px;
+
+html, body {
+    background-color: $bg-color;
+	color: $primary-color;
+    margin: 0;
+    text-align: $aligned;
+    font-family: $font-body;
+    font-size: $text-size;
+} 
+
+a, a:hover {
+    color: $link-color;
+}
+
+.mbottom {
+    margin-bottom: 30px;
+}
+
+.fullHeight {
+    height: 100vh;
+}
+
+.flexCenter {
+    align-items: $aligned;
+    display: flex;
+    justify-content: $aligned;
+    
+}
+
+.position {
+    position: relative;
+}
+
+.title {
+    font-size: $title-size;
+    font: 100% $font-title;
+}
+
+.subBG {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.subtitle {
+	color: $highlight-color;
+    
+    padding: 0px 20px;
+    background-color: $secondary-color;
+    border-radius: 20px;
+}
+
+.img {
+	max-height: $image-size;
+	max-width: $image-size;
+	margin: $image-margin;
+}
+
+
