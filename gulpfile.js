@@ -39,14 +39,14 @@ gulp.task('sass',function(){
 
 gulp.task('babel',function(){
     gulp.src(['node_modules/babel-polyfill/dist/polyfill.js',
-              'src/js/**/*.js'])
+              'src/js/**/*.es6.js'])
         .pipe(plumber({
             handleError: function (err) {
                 console.log(err);
                 this.emit('end');
             }
         }))
-        .pipe(babel())
+        .pipe(babel({presets:['@babel/env']}))
         .pipe(concat('main.js'))
         .pipe(gulp.dest('public/js'))
         .pipe(rename({
