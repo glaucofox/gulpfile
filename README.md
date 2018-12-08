@@ -12,6 +12,17 @@ Gulpfile with ES6, Sass, Babel and Jade
 yarn install
 ```
 
+## Run
+```sh
+gulp
+```
+
+## Minimize Images
+```sh
+gulp image
+```
+
+
 ## Core Packages
 
 | Package | Version |
