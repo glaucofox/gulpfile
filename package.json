@@ -6,8 +6,8 @@
       "main": "./public/index.html",
       "license": "MIT",
       "repository": {
-          "type": "git",
-          "url": "https://github.com/glaucofox/gulpfile"
+            "type": "git",
+            "url": "https://github.com/glaucofox/gulpfile"
       },
       "devDependencies": {
             "@babel/core": "^7.2.0",
@@ -29,6 +29,7 @@
             "gulp-plumber": "*",
             "gulp-rename": "*",
             "gulp-sass": "*",
+            "gulp-stylus": "^2.7.0",
             "gulp-uglify": "*"
       }
 }

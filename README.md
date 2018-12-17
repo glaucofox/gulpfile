@@ -4,7 +4,7 @@
 
 ## Description
 Gulp default actions are:
-- Compile ECMAScript, Scss and Jade
+- Compile ECMAScript, SCSS (or Stylus) and Jade
 - Minify Images, HTML, CSS and JS
 - Concatenate and add auto-prefixer to CSS and JS
 

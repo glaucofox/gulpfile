@@ -2,10 +2,9 @@ var gulp = require('gulp'),
 	plumber = require('gulp-plumber'),
 	rename = require('gulp-rename'),
 	sass = require('gulp-sass'),
-	autoPrefixer = require('gulp-autoprefixer');
-//if node version is lower than v.0.1.2
-require('es6-promise').polyfill();
-var cssComb = require('gulp-csscomb'),
+    stylus = require('gulp-stylus'),
+	autoPrefixer = require('gulp-autoprefixer'),
+    cssComb = require('gulp-csscomb'),
 	cmq = require('gulp-merge-media-queries'),
 	cleanCss = require('gulp-clean-css'),
 	babel = require('gulp-babel'),
@@ -15,6 +14,9 @@ var cssComb = require('gulp-csscomb'),
 	minifyHtml = require('gulp-minify-html'),
 	imageMin = require('gulp-imagemin'),
 	cache = require('gulp-cache');
+
+    //if node version is lower than v.0.1.2
+    require('es6-promise').polyfill();
 
 gulp.task('sass',function(){
     gulp.src(['src/styles/**/*.scss'])
@@ -35,6 +37,27 @@ gulp.task('sass',function(){
         }))
         .pipe(cleanCss())
         .pipe(gulp.dest('public/styles'))
+});
+
+gulp.task('stylus', function () {
+    return gulp.src(['src/styles/*.styl','!src/styles/_*.styl'])
+                .pipe(plumber({
+                    handleError: function (err) {
+                        console.log(err);
+                        this.emit('end');
+                    }
+                }))
+               .pipe(stylus())
+               .pipe(autoPrefixer())
+               .pipe(cssComb())
+               .pipe(cmq({log:true}))
+               .pipe(concat('main.css'))
+               .pipe(gulp.dest('public/styles'))
+               .pipe(rename({
+                   suffix: '.min'
+               }))
+               .pipe(cleanCss())
+               .pipe(gulp.dest('public/styles'))
 });
 
 gulp.task('babel',function(){
@@ -84,6 +107,7 @@ gulp.task('image',function(){
 gulp.task('default',function(){
     gulp.watch('src/js/**/*.js',['babel']);
     gulp.watch('src/styles/**/*.scss',['sass']);
+    gulp.watch(['src/styl/**/*.styl'],['stylus']);
     gulp.watch('src/**/*.jade',['jade']);
     gulp.watch('src/imgs/**/*',['image']);
 });
