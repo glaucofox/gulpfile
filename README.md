@@ -74,6 +74,7 @@ gulp image
 │       ├── styles # Write Sass and Stylus to CSS 
 │       │   ├── master.styl
 │       │   ├── other.styl
+│       │   │     - or -
 │       │   ├── master.scss
 │       │   └── other.scss
 │       └── index.jade # Write Jade to HTML
