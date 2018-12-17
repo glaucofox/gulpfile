@@ -10768,7 +10768,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }).call(this, typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {});
   }, {}]
 }, {}, [1]);
-'use strict';
+"use strict";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -10776,38 +10776,25 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var Spell =
+/* ES6 goes here */
+var Dog =
 /*#__PURE__*/
 function () {
-  function Spell(n, power, duration) {
-    _classCallCheck(this, Spell);
+  function Dog(name) {
+    _classCallCheck(this, Dog);
 
-    var self = this;
-    this.n = n;
-    this.power = power;
-    this.duration = duration;
+    this.name = name;
   }
 
-  _createClass(Spell, [{
-    key: "startTimer",
-    value: function startTimer() {
-      var intervalo = window.setTimeout(function () {
-        console.log('The spell ' + this.n + ' has been cast.');
-        clearInterval(intervalo);
-      }, this.duration);
-    }
-  }, {
-    key: "sayPower",
-    value: function sayPower() {
-      console.log(this.n + ' has ' + this.power + ' of power and it endures for ' + this.duration / 1000 + ' seconds.');
+  _createClass(Dog, [{
+    key: "sayHi",
+    value: function sayHi() {
+      return this.name + ' says woof!';
     }
   }]);
 
-  return Spell;
+  return Dog;
 }();
-/* Create and Execute */
 
-
-var s = new Spell('Immolate', 300, 2000);
-s.sayPower();
-s.startTimer();
+var spark = new Dog('Spark');
+console.log(spark.sayHi());
