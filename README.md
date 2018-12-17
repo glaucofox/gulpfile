@@ -4,7 +4,7 @@
 
 ## Description
 Gulp default actions are:
-- Compile ECMAScript, SCSS (or Stylus) and Jade
+- Compile ECMAScript, SCSS, Stylus and Jade
 - Minify Images, HTML, CSS and JS
 - Concatenate and add auto-prefixer to CSS and JS
 
@@ -42,6 +42,7 @@ gulp image
 | gulp-plumber | [![npm version](https://img.shields.io/npm/v/gulp-plumber.svg)](https://www.npmjs.org/package/gulp-plumber) |
 | gulp-rename | [![npm version](https://img.shields.io/npm/v/gulp-rename.svg)](https://www.npmjs.org/package/gulp-rename) |
 | gulp-sass | [![npm version](https://img.shields.io/npm/v/gulp-sass.svg)](https://www.npmjs.org/package/gulp-sass) |
+| gulp-stylus | [![npm version](https://img.shields.io/npm/v/gulp-stylus.svg)](https://www.npmjs.org/package/gulp-stylus) |
 | gulp-uglify | [![npm version](https://img.shields.io/npm/v/gulp-uglify.svg)](https://www.npmjs.org/package/gulp-uglify) |
 | **@babel/core** | [![npm version](https://img.shields.io/npm/v/@babel/core.svg)](https://www.npmjs.org/package/@babel/core) |
 | @babel/preset-env | [![npm version](https://img.shields.io/npm/v/@babel/preset-env.svg)](https://www.npmjs.org/package/@babel/preset-env) |
@@ -70,7 +71,9 @@ gulp image
 │       ├── layouts # Write layouts in Jade
 │       │   ├── layout.jade
 │       │   └── other.jade
-│       ├── styles # Write Sass to CSS 
+│       ├── styles # Write Sass and Stylus to CSS 
+│       │   ├── master.styl
+│       │   ├── other.styl
 │       │   ├── master.scss
 │       │   └── other.scss
 │       └── index.jade # Write Jade to HTML
