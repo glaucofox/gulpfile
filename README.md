@@ -55,7 +55,7 @@ gulp image
 ```sh
 ├── app
 │   ├── public 
-|   │   ├── imgs # Optimized images
+│   │   ├── imgs # Optimized images
 │   │   ├── js
 │   │   │   ├── main.js
 │   │   │   └── main.min.js
